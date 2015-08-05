@@ -1,0 +1,8 @@
+## generic files to ignore
+*~
+*.DS_Store
+*.swp
+*.out
+
+## Ignore the debug log created from yo html5 boilerplate generation:
+npm-debug.log
