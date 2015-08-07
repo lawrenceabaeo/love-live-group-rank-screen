@@ -6,3 +6,7 @@
 
 ## Ignore the debug log created from yo html5 boilerplate generation:
 npm-debug.log
+
+## Ignore sass cache:
+.sass-cache
+.sass-cache/*
