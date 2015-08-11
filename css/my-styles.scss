@@ -58,6 +58,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* ----------     Top Area     ---------- */
 .top-nav-area {
   margin-bottom: 10px;
   margin-left: 20px;
@@ -66,8 +67,8 @@ body {
   position: relative;
 }
 
-.profile-image-area {
-  display: inline-block;
+/* .profile-image-area { */
+.profile-image {
   margin-right: 20px;
   /* dimensions for image sizing */
   height:98px;
@@ -78,14 +79,12 @@ body {
 }
 
 .top-buttons-wrapper {
-  bottom: 5px; /* I don't know why I have to add 5px 
-    when I use overflow:hidden with 
-    the profile-image-area */
+  bottom: 0px;
   font-family: 'Raleway', sans-serif;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
-  display: inline-flex;  
+  display: inline-flex;
   position: absolute;
 }
 
@@ -368,15 +367,13 @@ body {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .profile-image-area { /* mobile */
+  /* .profile-image-area { /* mobile */
+  .profile-image { /* mobile */
     margin-right: 10px;
     width: 65px;
     max-height: 75px; 
   }
-  .profile-image-area img { /* mobile */
-    max-height: 100%;
-    max-width: 100%;
-  }
+
   .top-buttons-wrapper { /* mobile */
     position: absolute;
     right: 0px;
