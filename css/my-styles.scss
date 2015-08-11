@@ -48,7 +48,6 @@ body {
 }
 
 .overall-container {
-  max-width: 960px;
   margin-top: 10px;
   margin-right: auto;
   margin-left: auto;
@@ -56,9 +55,12 @@ body {
     breathing room between bottom of circle 
     border and the bottom edge of screen */ 
   margin-bottom: 20px;
+  max-width: 960px;
 }
 
+
 /* ----------     Top Area     ---------- */
+
 .top-nav-area {
   margin-bottom: 10px;
   margin-left: 20px;
@@ -80,11 +82,11 @@ body {
 
 .top-buttons-wrapper {
   bottom: 0px;
-  font-family: 'Raleway', sans-serif;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  font-family: 'Raleway', sans-serif;
   position: absolute;
 }
 
@@ -114,6 +116,9 @@ body {
   padding-right: 10px;
 }
 
+
+/* --------     Main Content Area     -------- */
+
 .main-content {
   border-image-source: url(../img/basic-border-white.png);
   border-image-repeat: repeat;
@@ -131,34 +136,41 @@ body {
 }
 
 .my-inner {
-  margin: 0px 0px;
-  padding-top: 50px;
   background: linear-gradient(
     to right, 
     $base-inner-pink 0%,
     lighten($base-inner-pink, 20%) 50%,
     $base-inner-pink 100%);
   border-radius: $radius-number;
+  margin: 0px 0px;
+  padding-top: 50px;
   position: relative;
 }
 
 .current-rank-badge {
-  $badge-color: #E94D63;
+  /* --- dimensions and shape --- */
   $badge-diameter: 60px;
-  text-align: center;
   height: $badge-diameter;
   width: $badge-diameter;
   border-radius: 50%;
+  
+  /* --- coloring and letters --- */
+  $badge-color: #E94D63;
   background-color: $badge-color;
+  box-shadow: 0px 0px 10px 1px darken($badge-color, 20%);
+  text-align: center;
   color: #FFFFFF;
   font-family: 'Lucida Sans Unicode', sans-serif;
   font-size: 1.35em;
   font-weight: 800;
   line-height: 21px;
-  /* positioning */
-  position: absolute;
-  left: 115px;
-  top: 203px;
+  
+  /* --- positioning --- */
+   position: absolute;
+   left: 115px;
+   top: 203px;
+  
+  /* --- flexbox goodness --- */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,7 +183,6 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
           align-items: center;
-  box-shadow: 0px 0px 10px 1px darken($badge-color, 20%);
 }
 
 .group-info-area-wrapper {
@@ -211,6 +222,8 @@ body {
       #F2D051 75%,
       #E8BE46 100%);
   border-image-slice: 1;
+  
+  /* --- lettering --- */
   color: $various-letters-color;
   font-size: 2em;
   text-align: center;
@@ -222,8 +235,8 @@ body {
 }
 
 .muse-name {
-  font-style: italic;
   font-size: 1.5em;
+  font-style: italic;
 }
 
 .rank-area {
@@ -253,9 +266,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
+  max-width: $inner-width;
   text-align: center;
   transition: box-shadow 0.3s;
-  max-width: $inner-width;
 }
 
 .fake-input-area p {
@@ -264,6 +277,9 @@ body {
   letter-spacing: 2px;
   margin-top: -2px;
 }
+
+
+/* --------     Bottom Gray Area     -------- */
 
 .bottom-nav-area {
   $base-bottom-nav-color: #B8B0B8;
@@ -309,18 +325,29 @@ body {
 }
 
 .bottom-nav-icon {
-  /* background-color: $base-letter-pink; */
   background-image: radial-gradient(circle, 
     $base-letter-pink 0%, 
     lighten($base-letter-pink, 25%) 25%,
     $base-letter-pink 75%,
     $base-letter-pink 100%);
-  border-radius: 50%;
+  
+  /*--- lettering ---*/
   color: #FFFFFF;
-  margin-left: 4px;
+  font-size: 1.5em;
+  line-height: 5px;
+  text-align: center;
+  
+  /*--- icon circle shape ---*/
+  border-radius: 50%;
   $icon-dimension: 31px;
   height: $icon-dimension;
   width: $icon-dimension;
+  
+  /*--- positioning ---*/
+  float:right; 
+  margin-left: 4px;
+  
+  /*--- flexbox goodness ---*/
   /* Need to center icons inside of div */
   display:-webkit-box;
   display:-webkit-flex;
@@ -334,19 +361,11 @@ body {
   -webkit-justify-content:center;
       -ms-flex-pack:center;
           justify-content:center;
-  text-align: center;
-  line-height: 5px;
 }
 
-.nav-user {
-  font-size: 1.5em;
-  float:right; 
-}
+.nav-user { }
 
-.nav-cog {
-  font-size: 1.5em;
-  float: right; 
-}
+.nav-cog { }
 
 .nav-checkmark {
   /* had to customize the gradient for the checkmark because the one that worked for the other two icons doesn't work so well for this */
@@ -356,11 +375,10 @@ body {
     $base-letter-pink 75%,
     $base-letter-pink 100%);
   font-size: 1.25em;
-  float: right; 
 }
 
 
-/* Mobile/Responsive styles -------------------- */
+/* Mobile/Responsive styles ------------------ */
 
 @media screen and (max-width: 480px) {
   .top-nav-area { /* mobile */
@@ -370,18 +388,17 @@ body {
   /* .profile-image-area { /* mobile */
   .profile-image { /* mobile */
     margin-right: 10px;
-    width: 65px;
     max-height: 75px; 
+    width: 65px;
   }
   .top-buttons-wrapper { /* mobile */
-    position: absolute;
     right: 0px;
   }
   .user-name-button { /* mobile */
     font-size: 1.5em;
+    max-height: 35px;
     padding-left: 25px;
     padding-right: 25px;
-    max-height: 35px;
   }
   .log-in-button { /* mobile */
     font-size: .85em;
