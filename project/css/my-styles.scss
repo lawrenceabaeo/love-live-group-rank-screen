@@ -1,0 +1,449 @@
+$base-body-color: #E455B9;
+$base-inner-pink: #F3B4E5;
+$base-letter-pink: #E636B6;
+$base-top-nav-button: #DBA8D2;
+$inner-width: 525px;
+$radius-number: 5px;
+$various-letters-color: lighten(#000000, 35%);
+
+@mixin debug {
+  border: 1px solid red;
+}
+
+@mixin hor-center {
+  margin: 0px auto;
+}
+
+@mixin top-buttons-styles {
+  background: linear-gradient(
+    to bottom, 
+    $base-top-nav-button 0%,
+    lighten($base-top-nav-button, 20%) 25%,
+    lighten($base-top-nav-button, 20%) 50%,
+    $base-top-nav-button 100%);
+  border-width: 1px;
+  height: 50px;
+}
+
+@font-face {
+  font-family: "Aldrich-Regular";
+  src: url(../font/Aldrich-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'RawengulkSans-094';
+  src: url('../font/RawengulkSans-094.woff') format('woff'),
+       url('../font/RawengulkSans-094.otf') format('opentype');
+}
+
+
+/* Start of styles -------------------- */
+
+body {
+  background: linear-gradient(
+    to right, 
+    $base-body-color 0%,
+    lighten($base-body-color, 15%) 50%,
+    $base-body-color 100%);
+}
+
+.overall-container {
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  /* Add margin-bottom so that there's
+    breathing room between bottom of circle 
+    border and the bottom edge of screen */ 
+  margin-bottom: 20px;
+  max-width: 960px;
+}
+
+
+/* ----------     Top Area     ---------- */
+
+.top-nav-area {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* .profile-image-area { */
+.profile-image {
+  margin-right: 20px;
+  /* dimensions for image sizing */
+  height:98px;
+  width:85px;
+  /* rounded corners */
+  border-radius: 5px;
+  overflow:hidden;
+}
+
+.top-buttons-wrapper {
+  bottom: 0px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+}
+
+.user-name-button {
+  /* this button is 'attached' to the login
+    button, so only round the right hand side
+    corners */
+  border-bottom-left-radius: $radius-number;
+  border-top-left-radius: $radius-number;
+  @include top-buttons-styles;
+  color: $various-letters-color;
+  font-size: 2em;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.log-in-button {
+  /* this button is 'attached' to the user 
+    button, so only round the left hand side
+    corners */
+  border-top-right-radius: $radius-number;
+  border-bottom-right-radius: $radius-number;
+  color: $various-letters-color;
+  @include top-buttons-styles;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* --------     Main Content Area     -------- */
+
+.main-content {
+  border-image-source: url(../img/basic-border-white.png);
+  border-image-repeat: repeat;
+  border-image-slice: 33.5%;
+  border-image-width: 22px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* need padding left and right so that 
+    the inner content is 'inside' the 
+    repeating circles border
+    NOTE: I'm sure there's a way to specify no 
+    sides for a border image, not sure how */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.my-inner {
+  background: linear-gradient(
+    to right, 
+    $base-inner-pink 0%,
+    lighten($base-inner-pink, 20%) 50%,
+    $base-inner-pink 100%);
+  border-radius: $radius-number;
+  margin: 0px 0px;
+  padding-top: 50px;
+  position: relative;
+}
+
+.current-rank-badge {
+  /* --- dimensions and shape --- */
+  $badge-diameter: 60px;
+  height: $badge-diameter;
+  width: $badge-diameter;
+  border-radius: 50%;
+  
+  /* --- coloring and letters --- */
+  $badge-color: #E94D63;
+  background-color: $badge-color;
+  box-shadow: 0px 0px 10px 1px darken($badge-color, 20%);
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+  font-size: 1.35em;
+  font-weight: 800;
+  line-height: 21px;
+  
+  /* --- positioning --- */
+   position: absolute;
+   left: 115px;
+   top: 203px;
+  
+  /* --- flexbox goodness --- */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+}
+
+.group-info-area-wrapper {
+  border-top: 3px solid transparent;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, 
+      darken(#FDF3A6, 35%) 0%,
+      darken(#F3D350, 25%) 17%, 
+      darken(#FFFFBF, 25%) 34%,
+      darken(#D3B34D, 25%) 51%,
+      darken(#F2D051, 10%) 75%,
+      darken(#E8BE46, 10%) 100%);
+  border-image-slice: 1;
+  max-width: $inner-width;
+  @include hor-center;
+}
+
+.group-info-area {
+  background: #FFFFFF;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  -webkit-border-image: -webkit-linear-gradient(left, #FDF3A6 0%, #F3D350 17%, #FFFFBF 34%, #D3B34D 51%, #F2D051 75%, #E8BE46 100%);
+       -o-border-image: linear-gradient(to right, 
+      #FDF3A6 0%,
+      #F3D350 17%, 
+      #FFFFBF 34%,
+      #D3B34D 51%,
+      #F2D051 75%,
+      #E8BE46 100%);
+          border-image: linear-gradient(to right, 
+      #FDF3A6 0%,
+      #F3D350 17%, 
+      #FFFFBF 34%,
+      #D3B34D 51%,
+      #F2D051 75%,
+      #E8BE46 100%);
+  border-image-slice: 1;
+  
+  /* --- lettering --- */
+  color: $various-letters-color;
+  font-size: 2em;
+  text-align: center;
+}
+
+.group-info-area p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.muse-name {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.rank-area {
+  color: $base-letter-pink;
+  font-family: Aldrich-Regular;
+  font-size: 6.17em; /* I know it's weird, I'm trying to get as close to 515px as possible, based on screenshot */
+  max-width: $inner-width;
+  text-align: center;
+  text-shadow: 1px 1px 5px #ffffff, 3px 3px 2px lighten($base-letter-pink, 5%);
+  @include hor-center;
+}
+
+.rank-area p {
+  margin-top: 5px;
+  margin-bottom: -20px;
+}
+
+.fake-input-area {
+  background-color: #ffffff;
+  border: solid 1px #fff;
+  border-radius: 35px;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  box-sizing: border-box;
+  color: $various-letters-color;
+  height: 45px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  max-width: $inner-width;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.fake-input-area p {
+  font-family: 'RawengulkSans-094', 'Raleway', sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-top: -2px;
+}
+
+
+/* --------     Bottom Gray Area     -------- */
+
+.bottom-nav-area {
+  $base-bottom-nav-color: #B8B0B8;
+  background: linear-gradient(
+    to right, 
+    $base-bottom-nav-color 0%,
+    lighten($base-bottom-nav-color, 20%) 50%,
+    $base-bottom-nav-color 100%);
+  border-bottom-left-radius: $radius-number;
+  border-bottom-right-radius: $radius-number;
+  height: 50px;
+  @include hor-center;
+}
+
+.bottom-button-wrapper {
+  margin-top: 15px;
+  margin-left: 20px;
+  float: left;
+}
+
+.bottom-logout-button { 
+  $btn-color: #E9EDEF;
+  background: linear-gradient(
+    to bottom, 
+    darken($btn-color, 15%) 0%,
+    $btn-color 25%,
+    $btn-color 55%,
+    darken($btn-color, 15%) 100%);
+  border-radius: 7px;
+  border-width: 1px;
+  color: $various-letters-color;
+  font-size: .90em;
+  font-weight: 800;
+  height: 20px;
+  padding: 0px 0px;
+  width: 95px;
+}
+
+.icon-nav-group {
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+.bottom-nav-icon {
+  background-image: radial-gradient(circle, 
+    $base-letter-pink 0%, 
+    lighten($base-letter-pink, 25%) 25%,
+    $base-letter-pink 75%,
+    $base-letter-pink 100%);
+  
+  /*--- lettering ---*/
+  color: #FFFFFF;
+  font-size: 1.5em;
+  line-height: 5px;
+  text-align: center;
+  
+  /*--- icon circle shape ---*/
+  border-radius: 50%;
+  $icon-dimension: 31px;
+  height: $icon-dimension;
+  width: $icon-dimension;
+  
+  /*--- positioning ---*/
+  float:right; 
+  margin-left: 4px;
+  
+  /*--- flexbox goodness ---*/
+  /* Need to center icons inside of div */
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+      -ms-flex-align:center;
+          align-items:center;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+}
+
+.nav-user { }
+
+.nav-cog { }
+
+.nav-checkmark {
+  /* had to customize the gradient for the checkmark because the one that worked for the other two icons doesn't work so well for this */
+  background-image: radial-gradient(circle, 
+    $base-letter-pink 0%, 
+    lighten($base-letter-pink, 15%) 25%,
+    $base-letter-pink 75%,
+    $base-letter-pink 100%);
+  font-size: 1.25em;
+}
+
+
+/* Mobile/Responsive styles ------------------ */
+
+@media screen and (max-width: 480px) {
+  .top-nav-area { /* mobile */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /* .profile-image-area { /* mobile */
+  .profile-image { /* mobile */
+    margin-right: 10px;
+    max-height: 75px; 
+    width: 65px;
+  }
+  .top-buttons-wrapper { /* mobile */
+    right: 0px;
+  }
+  .user-name-button { /* mobile */
+    font-size: 1.5em;
+    max-height: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .log-in-button { /* mobile */
+    font-size: .85em;
+    max-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .main-content { /* mobile */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .group-info-area-wrapper { /* mobile */
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .group-info-area { /* mobile */
+    font-size: 1em;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    /* min-height: 45px; */
+    /* -40 pixels to account for border top and bottom */
+    min-height: 67px; /* -40 pixels to account for border top and bottom */
+  }
+  .rank-area { /* mobile */
+    font-size: 3.25em;
+    text-shadow: 1px 1px 1px #ffffff, 2px 2px lighten(#000000, 30%);
+  }
+  .rank-area p { /* mobile */
+    margin-bottom: -10px;
+  }
+  .fake-input-area { /* mobile */
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .fake-input-area p { /* mobile */
+    font-size: 1em;
+    margin-top: 1px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .current-rank-badge {
+    display: none;
+  }
+}

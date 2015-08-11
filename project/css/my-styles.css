@@ -1,0 +1,367 @@
+@font-face {
+  font-family: "Aldrich-Regular";
+  src: url(../font/Aldrich-Regular.ttf); }
+
+@font-face {
+  font-family: 'RawengulkSans-094';
+  src: url("../font/RawengulkSans-094.woff") format("woff"), url("../font/RawengulkSans-094.otf") format("opentype"); }
+
+/* Start of styles -------------------- */
+/* line 42, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+body {
+  background: linear-gradient(to right, #E455B9 0%, #ee97d4 50%, #E455B9 100%); }
+
+/* line 50, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.overall-container {
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  /* Add margin-bottom so that there's
+    breathing room between bottom of circle 
+    border and the bottom edge of screen */
+  margin-bottom: 20px;
+  max-width: 960px; }
+
+/* ----------     Top Area     ---------- */
+/* line 64, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.top-nav-area {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  position: relative; }
+
+/* .profile-image-area { */
+/* line 73, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.profile-image {
+  margin-right: 20px;
+  /* dimensions for image sizing */
+  height: 98px;
+  width: 85px;
+  /* rounded corners */
+  border-radius: 5px;
+  overflow: hidden; }
+
+/* line 83, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.top-buttons-wrapper {
+  bottom: 0px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: 'Raleway', sans-serif;
+  position: absolute; }
+
+/* line 93, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.user-name-button {
+  /* this button is 'attached' to the login
+    button, so only round the right hand side
+    corners */
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background: linear-gradient(to bottom, #DBA8D2 0%, #f9f0f7 25%, #f9f0f7 50%, #DBA8D2 100%);
+  border-width: 1px;
+  height: 50px;
+  color: #595959;
+  font-size: 2em;
+  padding-left: 20px;
+  padding-right: 30px; }
+
+/* line 106, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.log-in-button {
+  /* this button is 'attached' to the user 
+    button, so only round the left hand side
+    corners */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #595959;
+  background: linear-gradient(to bottom, #DBA8D2 0%, #f9f0f7 25%, #f9f0f7 50%, #DBA8D2 100%);
+  border-width: 1px;
+  height: 50px;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+/* --------     Main Content Area     -------- */
+/* line 122, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.main-content {
+  border-image-source: url(../img/basic-border-white.png);
+  border-image-repeat: repeat;
+  border-image-slice: 33.5%;
+  border-image-width: 22px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* need padding left and right so that 
+    the inner content is 'inside' the 
+    repeating circles border
+    NOTE: I'm sure there's a way to specify no 
+    sides for a border image, not sure how */
+  padding-left: 20px;
+  padding-right: 20px; }
+
+/* line 138, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.my-inner {
+  background: linear-gradient(to right, #F3B4E5 0%, white 50%, #F3B4E5 100%);
+  border-radius: 5px;
+  margin: 0px 0px;
+  padding-top: 50px;
+  position: relative; }
+
+/* line 150, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.current-rank-badge {
+  /* --- dimensions and shape --- */
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  /* --- coloring and letters --- */
+  background-color: #E94D63;
+  box-shadow: 0px 0px 10px 1px #b9172e;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+  font-size: 1.35em;
+  font-weight: 800;
+  line-height: 21px;
+  /* --- positioning --- */
+  position: absolute;
+  left: 115px;
+  top: 203px;
+  /* --- flexbox goodness --- */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/* line 188, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.group-info-area-wrapper {
+  border-top: 3px solid transparent;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #ebd105 0%, #b7950d 17%, #ffff40 34%, #816a20 51%, #eec322 75%, #dfad1c 100%);
+  border-image-slice: 1;
+  max-width: 525px;
+  margin: 0px auto; }
+
+/* line 205, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.group-info-area {
+  background: #FFFFFF;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  -webkit-border-image: -webkit-linear-gradient(left, #FDF3A6 0%, #F3D350 17%, #FFFFBF 34%, #D3B34D 51%, #F2D051 75%, #E8BE46 100%);
+  -o-border-image: linear-gradient(to right, #FDF3A6 0%, #F3D350 17%, #FFFFBF 34%, #D3B34D 51%, #F2D051 75%, #E8BE46 100%);
+  border-image: linear-gradient(to right, #FDF3A6 0%, #F3D350 17%, #FFFFBF 34%, #D3B34D 51%, #F2D051 75%, #E8BE46 100%);
+  border-image-slice: 1;
+  /* --- lettering --- */
+  color: #595959;
+  font-size: 2em;
+  text-align: center; }
+
+/* line 232, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.group-info-area p {
+  margin-top: 5px;
+  margin-bottom: 0px; }
+
+/* line 237, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.muse-name {
+  font-size: 1.5em;
+  font-style: italic; }
+
+/* line 242, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.rank-area {
+  color: #E636B6;
+  font-family: Aldrich-Regular;
+  font-size: 6.17em;
+  /* I know it's weird, I'm trying to get as close to 515px as possible, based on screenshot */
+  max-width: 525px;
+  text-align: center;
+  text-shadow: 1px 1px 5px #ffffff, 3px 3px 2px #e94dbe;
+  margin: 0px auto; }
+
+/* line 252, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.rank-area p {
+  margin-top: 5px;
+  margin-bottom: -20px; }
+
+/* line 257, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.fake-input-area {
+  background-color: #ffffff;
+  border: solid 1px #fff;
+  border-radius: 35px;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  box-sizing: border-box;
+  color: #595959;
+  height: 45px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  max-width: 525px;
+  text-align: center;
+  transition: box-shadow 0.3s; }
+
+/* line 274, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.fake-input-area p {
+  font-family: 'RawengulkSans-094', 'Raleway', sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-top: -2px; }
+
+/* --------     Bottom Gray Area     -------- */
+/* line 284, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.bottom-nav-area {
+  background: linear-gradient(to right, #B8B0B8 0%, #e8e6e8 50%, #B8B0B8 100%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 50px;
+  margin: 0px auto; }
+
+/* line 297, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.bottom-button-wrapper {
+  margin-top: 15px;
+  margin-left: 20px;
+  float: left; }
+
+/* line 303, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.bottom-logout-button {
+  background: linear-gradient(to bottom, #bdc9cf 0%, #E9EDEF 25%, #E9EDEF 55%, #bdc9cf 100%);
+  border-radius: 7px;
+  border-width: 1px;
+  color: #595959;
+  font-size: .90em;
+  font-weight: 800;
+  height: 20px;
+  padding: 0px 0px;
+  width: 95px; }
+
+/* line 321, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.icon-nav-group {
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px; }
+
+/* line 327, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.bottom-nav-icon {
+  background-image: radial-gradient(circle, #E636B6 0%, #f4a7df 25%, #E636B6 75%, #E636B6 100%);
+  /*--- lettering ---*/
+  color: #FFFFFF;
+  font-size: 1.5em;
+  line-height: 5px;
+  text-align: center;
+  /*--- icon circle shape ---*/
+  border-radius: 50%;
+  height: 31px;
+  width: 31px;
+  /*--- positioning ---*/
+  float: right;
+  margin-left: 4px;
+  /*--- flexbox goodness ---*/
+  /* Need to center icons inside of div */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/* line 370, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+.nav-checkmark {
+  /* had to customize the gradient for the checkmark because the one that worked for the other two icons doesn't work so well for this */
+  background-image: radial-gradient(circle, #E636B6 0%, #ee7acf 25%, #E636B6 75%, #E636B6 100%);
+  font-size: 1.25em; }
+
+/* Mobile/Responsive styles ------------------ */
+@media screen and (max-width: 480px) {
+  /* line 384, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .top-nav-area {
+    /* mobile */
+    margin-left: 10px;
+    margin-right: 10px; }
+  /* .profile-image-area { /* mobile */
+  /* line 389, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .profile-image {
+    /* mobile */
+    margin-right: 10px;
+    max-height: 75px;
+    width: 65px; }
+  /* line 394, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .top-buttons-wrapper {
+    /* mobile */
+    right: 0px; }
+  /* line 397, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .user-name-button {
+    /* mobile */
+    font-size: 1.5em;
+    max-height: 35px;
+    padding-left: 25px;
+    padding-right: 25px; }
+  /* line 403, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .log-in-button {
+    /* mobile */
+    font-size: .85em;
+    max-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  /* line 409, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .main-content {
+    /* mobile */
+    padding-left: 10px;
+    padding-right: 10px; }
+  /* line 413, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .group-info-area-wrapper {
+    /* mobile */
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    margin-left: 15px;
+    margin-right: 15px; }
+  /* line 419, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .group-info-area {
+    /* mobile */
+    font-size: 1em;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    /* min-height: 45px; */
+    /* -40 pixels to account for border top and bottom */
+    min-height: 67px;
+    /* -40 pixels to account for border top and bottom */ }
+  /* line 427, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .rank-area {
+    /* mobile */
+    font-size: 3.25em;
+    text-shadow: 1px 1px 1px #ffffff, 2px 2px #4d4d4d; }
+  /* line 431, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .rank-area p {
+    /* mobile */
+    margin-bottom: -10px; }
+  /* line 434, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .fake-input-area {
+    /* mobile */
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 15px; }
+  /* line 439, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .fake-input-area p {
+    /* mobile */
+    font-size: 1em;
+    margin-top: 1px; } }
+
+@media screen and (max-width: 900px) {
+  /* line 446, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  .current-rank-badge {
+    display: none; } }
+
+/*# sourceMappingURL=my-styles.css.map */
