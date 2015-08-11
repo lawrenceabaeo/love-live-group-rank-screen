@@ -298,21 +298,22 @@ body {
     margin-right: 10px;
     width: 65px;
     max-height: 75px; }
-  /* line 377, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  /* line 376, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
   .top-buttons-wrapper {
     /* mobile */
     position: absolute;
     right: 0px; }
-  /* line 381, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  /* line 380, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
   .user-name-button {
     /* mobile */
     font-size: 1.5em;
     padding-left: 25px;
     padding-right: 25px;
     max-height: 35px; }
-  /* line 387, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
+  /* line 386, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
   .log-in-button {
     /* mobile */
+    font-size: .85em;
     max-height: 35px;
     padding-left: 10px;
     padding-right: 10px; }
