@@ -86,7 +86,7 @@ body {
 /* line 122, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
 .main-content {
   border-image-source: url(../img/basic-border-white.png);
-  border-image-repeat: repeat;
+  border-image-repeat: round;
   border-image-slice: 33.5%;
   border-image-width: 22px;
   padding-top: 30px;
