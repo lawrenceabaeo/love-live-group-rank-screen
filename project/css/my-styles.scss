@@ -7,7 +7,7 @@ $radius-number: 5px;
 $various-letters-color: lighten(#000000, 35%);
 
 @mixin debug {
-  border: 1px solid red;
+  border: 1px solid yellow;
 }
 
 @mixin hor-center {
@@ -78,6 +78,11 @@ body {
   /* rounded corners */
   border-radius: 5px;
   overflow:hidden;
+}
+
+.double-wrapper-for-ie-purpose {
+  display: inline-block;
+  position: static;
 }
 
 .top-buttons-wrapper {
