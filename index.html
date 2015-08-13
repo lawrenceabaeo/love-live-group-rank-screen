@@ -27,11 +27,11 @@
         <div class="overall-container">
           
           <div class="top-nav-area">
-            <img src="./img/honoka-icon.png" class="profile-image" alt="Honoka Kosouka Profile Image Thumbnail Image">
+            <a href="https://www.google.com/search?tbm=isch&q=honoka+kousaka&bav=on.2,or.&biw=946&bih=800&dpr=1" target="_blank"><img src="./img/honoka-icon.png" class="profile-image" alt="Honoka Kosouka Profile Image Thumbnail Image"></a>
               
             <div class="double-wrapper-for-ie-purpose">
               <div class="top-buttons-wrapper">
-                <button class="user-name-button">HONOKA</button><button class="log-in-button">LOG IN</button>
+                <a href="http://love-live.wikia.com/wiki/Kousaka_Honoka" target="_blank"><button class="user-name-button">HONOKA</button></a><button class="log-button log-in-button">LOG IN</button>
               </div>
             </div>
             
@@ -43,41 +43,47 @@
                   <div class="group-info-area-wrapper">
                     <div class="group-info-area">
                       <p>
-                      音ノ木坂学院 アイドル研究部<br>
-                      <span class="muse-name">μ's</span> (ミューズ)
+                        <a href="http://love-live.wikia.com/wiki/Otonokizaka_High_School" title="Link to wikia entry for Otonokizaka High School" target="_blank">音ノ木坂学院 アイドル研究部</a><br>
+                      <a href="http://love-live.wikia.com/wiki/Muse" target="_blank"><span class="muse-name">μ's</span> (ミューズ)</a>
                       </p>
                     </div>
                   </div><!-- group-info-area-wrapper -->
                 
-                <div class="current-rank-badge"> 
-                  UP!<br>
-                  &uarr;
-                </div>
-            <div class="rank-area">
-                    <p>RANK 999</p>
-                </div>
+                  <a href="http://love-live.wikia.com/wiki/Love_Live!_(School_Idol_Tournament)" target="_blank">
+                    <div class="current-rank-badge"> 
+                    UP!<br>
+                    &uarr;
+                    </div>
+                  </a>
+                  <a href="http://love-live.wikia.com/wiki/Love_Live!_(School_Idol_Tournament)" class="rank-link-wrapper" target="_blank">
+                    <div class="rank-area">
+                        <p>RANK 999</p>
+                    </div>
+                  </a>
 
                   <div class="fake-input-area"><p>Congratulations! ヾ( ´ ∀｀ )ﾉ"</p>
                   </div>
 
                 <div class="bottom-nav-area">
                   <div class="bottom-button-wrapper">
-                    <button class="bottom-logout-button">
+                    <button class="log-button bottom-logout-button">
                       LOG OUT
                     </button>
                   </div>
                   
-                  <div class="icon-nav-group">
-                    <div class="bottom-nav-icon nav-checkmark">
-                      <i class="icon-ok"></i>
-                    </div>
-                    <div class="bottom-nav-icon nav-cog">
-                      <i class="icon-cog-1"></i>
-                    </div>
-                    <div class="bottom-nav-icon nav-user">
-                      <i class="icon-user-2"></i>
-                    </div>
-                  </div>
+                  <a href="http://lawrenceabaeo.github.io" target="_blank">
+                    <div class="icon-nav-group-area">
+                      <div class="bottom-nav-icon nav-checkmark">
+                        <i class="icon-ok"></i>
+                      </div>
+                      <div class="bottom-nav-icon nav-cog">
+                        <i class="icon-cog-1"></i>
+                      </div>
+                      <div class="bottom-nav-icon nav-user">
+                        <i class="icon-user-2"></i>
+                      </div>
+                    </div><!-- icon-nav-group-area -->
+                  </a>
                 </div><!-- bottom-nav-area -->
               </div><!-- my-inner -->
           </div><!-- my-container -->
@@ -87,6 +93,10 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script>
+          $(".log-button").on("click", function() {
+            alert("Thanks for viewing the ranking page! We'll let you stay here to keep gazing at your amazing rank even more! ｡◕‿◕｡");
+          });
+        </script>
     </body>
 </html>
