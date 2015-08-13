@@ -356,13 +356,13 @@ body {
 .bottom-nav-icon {
   background-image: radial-gradient(circle, 
     $base-letter-pink 0%, 
-    lighten($base-letter-pink, 25%) 25%,
-    $base-letter-pink 75%,
+    lighten($base-letter-pink, 15%) 35%,
+    $base-letter-pink 85%,
     $base-letter-pink 100%);
   
   /*--- lettering ---*/
   color: #FFFFFF;
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 5px;
   text-align: center;
   
