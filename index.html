@@ -31,7 +31,7 @@
               
             <div class="double-wrapper-for-ie-purpose">
               <div class="top-buttons-wrapper">
-                <a href="http://love-live.wikia.com/wiki/Kousaka_Honoka" target="_blank"><button class="user-name-button">HONOKA</button></a><button class="log-button log-in-button">LOG IN</button>
+                <button class="user-name-button">HONOKA</button><button class="log-button log-in-button">LOG IN</button>
               </div>
             </div>
             
@@ -97,6 +97,10 @@
           $(".log-button").on("click", function() {
             alert("Thanks for viewing the ranking page! We'll let you stay here to keep gazing at your amazing rank even more! ｡◕‿◕｡");
           });
+          $(".user-name-button").on("click", function() {
+            window.open("http://love-live.wikia.com/wiki/Kousaka_Honoka");
+          });
+            
         </script>
     </body>
 </html>
