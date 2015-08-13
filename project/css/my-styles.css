@@ -274,10 +274,10 @@ body {
 
 /* line 356, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
 .bottom-nav-icon {
-  background-image: radial-gradient(circle, #E636B6 0%, #f4a7df 25%, #E636B6 75%, #E636B6 100%);
+  background-image: radial-gradient(circle, #E636B6 0%, #ee7acf 35%, #E636B6 85%, #E636B6 100%);
   /*--- lettering ---*/
   color: #FFFFFF;
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 5px;
   text-align: center;
   /*--- icon circle shape ---*/
