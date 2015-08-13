@@ -25,6 +25,23 @@ $various-letters-color: lighten(#000000, 35%);
   height: 50px;
 }
 
+/* Unstyled links from this codepen:
+http://codepen.io/lowercase/pen/dBFxm
+*/
+@mixin link-unstyled {
+  &, &:visited, &:hover, &:active {
+    font-style: inherit;
+    color: inherit;
+    background-color: transparent;
+    font-size: inherit;
+    text-decoration: none;
+    font-variant: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-family: inherit;
+  }
+}
+
 @font-face {
   font-family: "Aldrich-Regular";
   src: url(../font/Aldrich-Regular.ttf);
@@ -120,7 +137,6 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 
 /* --------     Main Content Area     -------- */
 
@@ -239,6 +255,10 @@ body {
   margin-bottom: 0px;
 }
 
+.group-info-area a {
+  @include link-unstyled;
+}
+
 .muse-name {
   font-size: 1.5em;
   font-style: italic;
@@ -257,6 +277,10 @@ body {
 .rank-area p {
   margin-top: 5px;
   margin-bottom: -20px;
+}
+
+.rank-link-wrapper {
+  text-decoration: none;
 }
 
 .fake-input-area {
@@ -323,7 +347,7 @@ body {
   width: 95px;
 }
 
-.icon-nav-group {
+.icon-nav-group-area {
   float: right;
   margin-right: 20px;
   margin-top: 8px;
