@@ -185,7 +185,7 @@ body {
 /* line 257, /Users/lawrenceabaeo/code/love-live-group-rank-screen/css/my-styles.scss */
 .rank-area {
   color: #E636B6;
-  font-family: 'Aldrich', sans-serif;
+  font-family: 'aldrichregular', sans-serif;
   font-size: 6.17em;
   /* I know it's weird, I'm trying to get as close to 515px as possible, based on screenshot */
   max-width: 525px;
