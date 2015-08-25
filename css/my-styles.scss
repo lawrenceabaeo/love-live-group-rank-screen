@@ -43,11 +43,6 @@ http://codepen.io/lowercase/pen/dBFxm
 }
 
 @font-face {
-  font-family: "Aldrich-Regular";
-  src: url(../font/Aldrich-Regular.ttf);
-}
-
-@font-face {
   font-family: 'RawengulkSans-094';
   src: url('../font/RawengulkSans-094.woff') format('woff'),
        url('../font/RawengulkSans-094.otf') format('opentype');
@@ -261,7 +256,7 @@ body {
 
 .rank-area {
   color: $base-letter-pink;
-  font-family: Aldrich-Regular;
+  font-family: 'Aldrich', sans-serif;
   font-size: 6.17em; /* I know it's weird, I'm trying to get as close to 515px as possible, based on screenshot */
   max-width: $inner-width;
   text-align: center;
